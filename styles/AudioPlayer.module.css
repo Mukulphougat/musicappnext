@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+.names{
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+.audioPlayer{
+    --primary: #f40082;
+    --secondary: #ffd200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+.forwardBackward{
+    color: white;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-size: 16px;
+    cursor: pointer;
+}
+.forwardBackward:hover{
+    color: var(--primary);
+}
+.playPause{
+    background: var(--primary);
+    border: none;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    font-size: 32px;
+    color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.repeatButton {
+    color: white;
+
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-size: 16px;
+    cursor: pointer;
+}
+.repeatButton:hover{
+    color: var(--primary);
+}
+.play {
+    position: relative;
+    left: 5px;
+}
+.currentTime,
+.duration{
+    color: white;
+
+    font-family: monospace;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.currentTime {
+    color: white;
+    margin-left: 15px;
+}
+.progressBar{
+    --bar-bg: #ffe3d4;
+    --seek-before-width: 100px;
+    --seek-before-color: #ffc2a1;
+    --knobby: #3452a5;
+    --selectedKnobby: #26c9c3;
+    appearance: none;
+    background: var(--bar-bg);
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 11px;
+    outline: none;
+}
+/*Chrome*/
+.progressBar::-webkit-slider-runnable-track{
+    background: var(--bar-bg);
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 11px;
+    outline: none;
+}
+/*Firefox*/
+.progressBar::-moz-range-track{
+    background: var(--bar-bg);
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 11px;
+    outline: none;
+}
+.progressBar::-moz-focus-outer{
+    border: 0;
+}
+
+/* progress bar -chrome and safari */
+.progressBar::before{
+    content: '';
+    height: 11px;
+    width: var(--seek-before-width);
+    background-color: var(--seek-before-color);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.progressBar::-moz-range-progress{
+    background-color: var(--seek-before-color);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 11px;
+}
+.progressBar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--knobby);
+    position: relative;
+    margin: -2px 0 0 0;
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+.progressBar:active::-webkit-slider-thumb{
+    transform: scale(1.2);
+    background-color: var(--selectedKnobby);
+}
+.progressBar::-moz-range-thumb{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: transparent;
+    background-color: var(--knobby);
+    position: relative;
+    z-index: 3;
+    box-sizing: border-box;
+}
+.progressBar:active::-moz-range-thumb{
+    transform: scale(1.2);
+    background-color: var(--selectedKnobby);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* Music Component Styling */
+
+

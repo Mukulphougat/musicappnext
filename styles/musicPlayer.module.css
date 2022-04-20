@@ -1,0 +1,69 @@
+.musicComponent{
+    display: flex;
+    /*border-radius: 10px;*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px #fafafa solid;
+    height: 400px;
+    width: 30%;
+    box-shadow: 9px 9px 0px -1px rgba(222,180,180,0.75);
+    -webkit-box-shadow: 9px 9px 0px -1px rgba(222,180,180,0.75);
+    -moz-box-shadow: 9px 9px 0px -1px rgba(222,180,180,0.75);
+}
+.myThumb{
+    border-radius: 10px;
+    width: 100%;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.songContainer{
+    border: 2px #fafafa solid;
+    margin-left: 50px;
+    width: 50%;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mySong{
+    border: #26c9c3 2px solid;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.songInfo {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.head{
+    font-family: 'Trebuchet MS', sans-serif;
+    color: saddlebrown;
+}
+/*.audioComponent{*/
+/*    margin-left: 50px;*/
+/*}*/
+
+@media screen and (max-width: 600px){
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .musicComponent{
+        width: 100%;
+    }
+    .songContainer {
+        margin-left: unset;
+        width: 100%;
+    }
+}
+
+.actSongContainer{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+}

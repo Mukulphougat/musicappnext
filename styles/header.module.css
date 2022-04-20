@@ -1,0 +1,22 @@
+.header{
+    width: 100%;
+    height: 20px;
+}
+.buttonContainer{
+    float: right;
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+}
+.buttonContainer:hover{
+    color: dodgerblue;
+}
+.homeButton{
+    float: left;
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+}
+.homeButton:hover{
+    color: dodgerblue;
+}
