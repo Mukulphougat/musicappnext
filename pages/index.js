@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import MusicComponent from "../components/MusicComponent";
 import axios from "axios";
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const res = await axios.get("https://musicappmukul.herokuapp.com/songs");
   return {
     props: {data: res.data},
