@@ -73,7 +73,7 @@ const AudioPlayer = (props) => {
         <div className={styles.audioPlayer}>
             <div className={styles.names}>{props.title}</div>
             <div className={styles.names}>{props.artist}</div>
-            <audio ref={audioPlayer} src={`https://musicarchivemukul.s3.amazonaws.com/${props.currentSongName}`} loop={currRepeat}/>
+            <audio ref={audioPlayer} src={`https://musicstoremukul.blob.core.windows.net/musiccontainer/${props.currentSongName}`} loop={currRepeat}/>
             <div className={styles.container}>
                 <button onClick={backThirty} className={styles.forwardBackward}><BsArrowLeftShort />10</button>
                 <button onClick={togglePlayPause} className={styles.playPause}>{ !isPlaying ? <FaPause/> : <FaPlay className={styles.play}/> }</button>
