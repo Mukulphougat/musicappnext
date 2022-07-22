@@ -32,6 +32,10 @@
     justify-content: center;
 }
 .mySong{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
     border: #26c9c3 2px solid;
     color: white;
     font-family: 'Trebuchet MS', sans-serif;
@@ -54,9 +58,9 @@
     }
     .musicComponent{
         width: 100%;
+        margin: 50px;
     }
     .songContainer {
-        margin-left: unset;
         width: 100%;
     }
 }
@@ -67,3 +71,19 @@
     overflow-y: scroll;
 
 }
+.favourite {
+    color: dodgerblue;
+    font-size: 25px;
+}
+
+.notFavourite {
+    color: white;
+    font-size: 25px;
+}
+
+.full {
+    margin-bottom: 20px;
+}
+
+
+

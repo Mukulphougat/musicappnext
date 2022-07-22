@@ -3,6 +3,7 @@
     height: 20px;
 }
 .buttonContainer{
+    font-family: 'Font Mono', monospace;
     float: right;
     margin: 20px;
     color: white;
@@ -12,6 +13,7 @@
     color: dodgerblue;
 }
 .homeButton{
+    font-family: 'Font Mono', monospace;
     float: left;
     margin: 20px;
     color: white;

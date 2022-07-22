@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import MusicComponent from "../components/MusicComponent";
 import axios from "axios";
 export const getServerSideProps = async () => {
-  const res = await axios.get("https://musicappmukul.herokuapp.com/songs");
+  const res = await axios.get("http://localhost:8080/songs");
   return {
     props: {data: res.data},
   };

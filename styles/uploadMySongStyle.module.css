@@ -20,6 +20,7 @@
     -moz-box-shadow: 9px 9px 0px -1px rgba(222,180,180,0.75);
 }
 .file, .artist, .title{
+    font-family: 'Font Mono', monospace;
     border: 2px solid white;
     display: flex;
     flex-direction: row;
@@ -27,11 +28,11 @@
 }
 .labels {
     margin-right: 10px;
-
-    font-size: 20px;
+    font-size: 1rem;
     color: white;
 }
 .inputs0{
+    font-family: 'Font Mono', monospace;
     color: white;
 }
 
@@ -48,4 +49,13 @@
 .button:hover {
     background-color: #B9DFFF;
     color: black;
+}
+
+@media screen and ( max-width: 600px){
+    .formContainer{
+        width: 50%;
+    }
+    .labels {
+        font-size: 15px;
+    }
 }

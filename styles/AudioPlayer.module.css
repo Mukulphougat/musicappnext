@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 .names{
     font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Font Mono', monospace;
 }
 .audioPlayer{
     --primary: #f40082;

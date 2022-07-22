@@ -29,7 +29,7 @@ const UploadMySong = () => {
         }
 
 
-        const response = await axios.post("https://musicappmukul.herokuapp.com/songs/uploadMySong/", formData)
+        const response = await axios.post("http://localhost:8080/songs/uploadMySong/", formData)
             .then(res => {
                 console.log(res)
                 router.push("/");
