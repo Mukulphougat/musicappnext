@@ -28,8 +28,8 @@ const UploadMySong = () => {
             return;
         }
 
-
-        const response = await axios.post("http://localhost:8080/songs/uploadMySong/", formData)
+        // https://musicappmukul.herokuapp.com/
+        const response = await axios.post("https://musicbackend.azurewebsites.net/songs/uploadMySong/", formData)
             .then(res => {
                 console.log(res)
                 router.push("/");

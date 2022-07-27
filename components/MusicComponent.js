@@ -24,7 +24,7 @@ const MusicComponent = (props) => {
                 const formData = new FormData();
                 formData.append('id', currIdD)
                 formData.append('favourite', currSongD);
-                const res = await axios.put("http://localhost:8080/songs/setAsFavourite", formData).then(result => {
+                const res = await axios.put("https://musicbackend.azurewebsites.net/songs/setAsFavourite", formData).then(result => {
                     console.log(result);
                     router.push("/");
                 }).catch(err => {
