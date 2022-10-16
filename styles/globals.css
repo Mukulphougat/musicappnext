@@ -1,3 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components{
+  .shadowMy {
+    box-shadow: 9px 9px 0px -1px rgba(222,180,180,0.75);
+    -webkit-box-shadow: 9px 9px 0px -1px rgba(222,180,180,0.75);
+    -moz-box-shadow: 9px 9px 0px -1px rgba(222,180,180,0.75);
+  }
+  .full {
+    margin-bottom: 20px;
+  }
+}
 html,
 body {
   background-color: black;

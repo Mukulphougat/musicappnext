@@ -2,8 +2,10 @@ import styles from "../styles/uploadMySongStyle.module.css"
 import axios from "axios";
 import {useState} from "react";
 import {useRouter} from "next/router";
+import {getSession, signIn, useSession} from "next-auth/react";
 
 const UploadMySong = () => {
+    const {data:session, status} = useSession()
     const [file,setFile] = useState(null);
     const [artist,setArtist] = useState(null);
     const [title,setTitle] = useState(null);
@@ -38,6 +40,28 @@ const UploadMySong = () => {
 
     };
 
+    if ( status === "unauthenticated" ) {
+        return (
+            <>
+                {/*<button className={"my-20 mx-20 text-green-500"} onClick={() => signIn()}>Sign in</button>*/}
+                <div className={styles.container}>
+                    <div className={styles.loginContainer}>
+                        <button className={"w-48 border hover:text-blue-200 border-2 border-zinc-50 text-blue-500 font-mono h-12"} onClick={() => signIn()}>Sign In</button>
+                    </div>
+                </div>
+            </>
+        )
+    }
+    else if ( status === "authenticated" && session.user === process.env.ADMIN ) {
+        return (
+            <>
+                {/*<button className={"my-20 mx-20 text-green-500"} onClick={() => signIn()}>Sign in</button>*/}
+                <div className={styles.container}>
+                    <h1 className={"w-48 border text-blue-500 font-mono rounded-xl h-12"}>Only Admin Can Upload</h1>
+                </div>
+            </>
+        )
+    }
     return (
         <div className={styles.container}>
             <form className={styles.formContainer} onSubmit={handleSubmit}>
