@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start -p $PORT",
-    "heroku-postbuild": "npm run build"
+    "dev": "doppler run -- next dev",
+    "build": "doppler run -- next build",
+    "start": "doppler run -- next start -p $PORT",
+    "heroku-postbuild": "doppler run -- npm run build"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.5",
